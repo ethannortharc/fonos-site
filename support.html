@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonos Support</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px 56px;
+      background: #fdfcfa;
+      color: #23211e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.01em; }
+    h2 { font-size: 21px; line-height: 1.3; margin: 40px 0 12px; letter-spacing: -0.005em; }
+    h3 { font-size: 17px; line-height: 1.4; margin: 28px 0 8px; font-weight: 600; }
+    p, li { margin: 0 0 14px; }
+    ul, ol { padding-left: 22px; margin: 0 0 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #a6631b; text-overflow: ellipsis; overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 1px 5px;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+    }
+    nav {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 15px;
+    }
+    nav a { margin-right: 16px; white-space: nowrap; }
+    footer {
+      max-width: 720px;
+      margin: 48px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      color: #6d675f;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #171614; color: #e9e5df; }
+      a { color: #e0a253; }
+      code { background: rgba(255, 255, 255, 0.08); }
+      nav { border-bottom-color: rgba(255, 255, 255, 0.12); }
+      footer { border-top-color: rgba(255, 255, 255, 0.12); color: #9b948a; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Fonos</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="support.zh-Hans.html">中文</a>
+  </nav>
+  <main>
+    <h1>Fonos Support</h1>
+    <p>Fonos is a voice dictation app for iPhone. Tap to record, speak, and get text you can insert, copy, refine, translate, or file into a notebook — in the app, or through the Fonos keyboard without leaving the app you are typing in.</p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ethanzhou222@gmail.com">ethanzhou222@gmail.com</a></p>
+    <p>Write in English or Chinese. Please include your iPhone model and iOS version when reporting a problem, plus what you did and what you saw instead.</p>
+    <p>There is also a public issue tracker at <a href="https://github.com/ethannortharc/fonos-ios/issues">https://github.com/ethannortharc/fonos-ios/issues</a>. Do not include API keys, transcripts, recordings, or other personal information in a public issue — use the email address above for anything that touches your data.</p>
+    <p>Privacy policy: <a href="https://fonos.giomni.com/privacy">https://fonos.giomni.com/privacy</a></p>
+    <h2>Quick Start</h2>
+    <ol>
+      <li>Open Fonos and allow microphone access when prompted.</li>
+      <li>Allow speech recognition access when prompted. Apple Speech works with no further setup and no API key.</li>
+      <li>Tap the microphone on the Dictate tab, speak, and tap again to stop.</li>
+      <li>Optional — to type into other apps, add the Fonos keyboard in iOS Settings → General → Keyboard → Keyboards → Add New Keyboard → Fonos, then turn on Allow Full Access for dictation.</li>
+      <li>Optional — to use your own speech-to-text or language-model service, add it under Settings → Models.</li>
+    </ol>
+    <p>Stuck? Settings → General → Setup Doctor checks permissions, the keyboard bridge, your endpoints, and your configuration in one pass.</p>
+    <h2>Frequently Asked Questions</h2>
+    <h3>Why does Fonos need the microphone?</h3>
+    <p>To record your voice for dictation. Nothing is recorded until you start a recording, or until you explicitly start a Keyboard Ready session for keyboard dictation. If you denied the permission, turn it back on in iOS Settings → Privacy &amp; Security → Microphone → Fonos.</p>
+    <h3>Why does Fonos need speech recognition permission?</h3>
+    <p>Apple Speech is the default transcription engine and it is performed by iOS. iOS requires your permission before an app may use it. When your device and the selected language support on-device recognition, the audio is recognized on the device; otherwise iOS may send it to Apple's servers, which is governed by Apple's privacy policy. If you configure your own speech-to-text service instead, that service is used and Apple Speech is not.</p>
+    <h3>What is Full Access, and why does the Fonos keyboard ask for it?</h3>
+    <p>Full Access is the iOS switch that lets a custom keyboard talk to its containing app and the network. iOS custom keyboards cannot record audio themselves, so the Fonos keyboard asks the main Fonos app to record and transcribe, over a shared App Group container on your device. That channel is only available with Full Access on.</p>
+    <p>Without Full Access the Fonos keyboard still types: digits, punctuation, space, delete, return, and the globe key that switches back to your usual keyboard. Only dictation needs Full Access.</p>
+    <p>Turn it on in iOS Settings → General → Keyboard → Keyboards → Fonos → Allow Full Access.</p>
+    <h3>What is Keyboard Ready, and why do I see an orange dot?</h3>
+    <p>Keyboard Ready is a time-limited window during which the main app keeps microphone input alive so the keyboard can dictate without switching apps. Start it in Fonos → Settings → General → Keyboard Dictation. It defaults to 15 minutes and can be set between 1 and 30 minutes.</p>
+    <p>While it is active, iOS shows its orange microphone indicator — that is iOS telling you the truth: an input session is open. Fonos discards all idle audio and keeps nothing until you tap the microphone on the Fonos keyboard. A banner in Fonos shows the remaining time and stops the session on one tap; it also expires on its own. Launching Fonos alone never opens the microphone.</p>
+    <h3>Does the Fonos app have to be running for keyboard dictation?</h3>
+    <p>Yes. The keyboard has no recorder of its own, so the main app must be alive and in a Keyboard Ready session. Keeping Fonos in the background is enough — you do not need it on screen. If you swipe Fonos away in the app switcher, or iOS reclaims it while it is backgrounded, the keyboard reports that it cannot reach the app; reopen Fonos and start Keyboard Ready again.</p>
+    <h3>What can the keyboard do without Full Access?</h3>
+    <p>It types digits, punctuation, space, delete, and return, and it switches to your next keyboard with the globe key. It cannot dictate, because that requires the connection to the main app. The keyboard shows what is missing rather than failing silently.</p>
+    <h3>Why is Fonos asking for local network permission?</h3>
+    <p>Only if you point Fonos at a model server on your own network — for example OMLX, Ollama, or LM Studio at an address such as <code>http://192.168.1.10:11434</code>. iOS requires permission before an app may reach other devices on your local network. If you only use Apple Speech or an HTTPS service on the internet, this prompt never appears. It is per-app in iOS Settings → Privacy &amp; Security → Local Network.</p>
+    <h3>How do I delete my data or withdraw permission from an AI service?</h3>
+    <p>Everything lives on your device.</p>
+    <ul>
+      <li>History: on the History tab, swipe a row to delete it. Settings → General → History sets how long entries are kept (7, 30, 90 days, or forever).</li>
+      <li>Notes: swipe a note away inside its notebook; delete a whole notebook from that notebook's settings.</li>
+      <li>API keys: delete the model profile under Settings → Models; its key is removed from the Keychain with it. Do this before uninstalling if you want the credential explicitly gone.</li>
+      <li>Remote-AI permission: Settings → General → Privacy &amp; Data Sharing → withdraw. Fonos then blocks further network speech-to-text and language-model requests until you allow that endpoint again.</li>
+    </ul>
+    <p>Withdrawing permission does not delete anything a provider already received — ask that provider directly, under its own privacy policy.</p>
+    <h3>How do I use Fonos completely offline?</h3>
+    <p>Use Apple Speech, keep every recipe free of language-model steps, and configure no remote endpoints. Fonos itself then sends nothing to the network.</p>
+    <p>Whether Apple recognizes the speech on the device or on Apple's servers is decided by iOS, based on your device and the selected language; iOS uses on-device recognition when that language is supported and downloaded for your device. The honest test is airplane mode: if dictation still produces text with no network, recognition is happening on the device.</p>
+    <h2>Troubleshooting Keyboard Dictation</h2>
+    <p>If tapping the keyboard microphone does nothing, or reports an error, walk these in order:</p>
+    <ol>
+      <li>Is the Fonos keyboard added, and is Allow Full Access on? (iOS Settings → General → Keyboard → Keyboards → Fonos)</li>
+      <li>Is Fonos running, and is Keyboard Ready active? (the banner shows the remaining time)</li>
+      <li>Did the session expire? Start it again; it lasts 15 minutes by default.</li>
+      <li>Did a phone call, Siri, or a headset change interrupt it? Fonos pauses and recovers; if the banner says paused, wait a moment or stop and restart the session.</li>
+      <li>Still stuck: Settings → General → Setup Doctor, which reports permissions, the App Group bridge, and endpoint reachability.</li>
+    </ol>
+    <h2>Model Configuration</h2>
+    <p>Fonos uses Apple Speech out of the box, with no account and no API key.</p>
+    <p>Under Settings → Models you can add your own speech-to-text or language-model service by entering its endpoint and your API key — any OpenAI-compatible service, or a local server. Before Fonos sends voice or text to a configured endpoint, it names the provider and destination, says what will be sent, and asks for permission. You can withdraw that permission at any time.</p>
+    <p>Public endpoints must use HTTPS. Clear-text HTTP is accepted only for a localhost or local-network address you configured yourself.</p>
+    <p>API keys are stored in the iOS Keychain, marked as belonging to this device only. They are never sent to the developer of Fonos.</p>
+  </main>
+  <footer>© 2026 Ethan H.B. Zhou</footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonos 支持</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px 56px;
+      background: #fdfcfa;
+      color: #23211e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.01em; }
+    h2 { font-size: 21px; line-height: 1.3; margin: 40px 0 12px; letter-spacing: -0.005em; }
+    h3 { font-size: 17px; line-height: 1.4; margin: 28px 0 8px; font-weight: 600; }
+    p, li { margin: 0 0 14px; }
+    ul, ol { padding-left: 22px; margin: 0 0 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #a6631b; text-overflow: ellipsis; overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 1px 5px;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+    }
+    nav {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 15px;
+    }
+    nav a { margin-right: 16px; white-space: nowrap; }
+    footer {
+      max-width: 720px;
+      margin: 48px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      color: #6d675f;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #171614; color: #e9e5df; }
+      a { color: #e0a253; }
+      code { background: rgba(255, 255, 255, 0.08); }
+      nav { border-bottom-color: rgba(255, 255, 255, 0.12); }
+      footer { border-top-color: rgba(255, 255, 255, 0.12); color: #9b948a; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Fonos</a>
+    <a href="privacy.zh-Hans.html">隐私政策</a>
+    <a href="support.html">English</a>
+  </nav>
+  <main>
+    <h1>Fonos 支持</h1>
+    <p>Fonos 是一款 iPhone 语音听写 App。点一下开始录音，说话，就能得到可以插入、复制、润色、翻译或归入笔记本的文字——可以在 App 内完成，也可以用 Fonos 键盘在你正在打字的那个 App 里直接完成，不用跳转。</p>
+    <h2>联系方式</h2>
+    <p>邮箱：<a href="mailto:ethanzhou222@gmail.com">ethanzhou222@gmail.com</a></p>
+    <p>中英文均可。反馈问题时请附上你的 iPhone 型号和 iOS 版本，以及你做了什么、实际看到了什么。</p>
+    <p>也有一个公开的问题追踪页：<a href="https://github.com/ethannortharc/fonos-ios/issues">https://github.com/ethannortharc/fonos-ios/issues</a> 。请不要在公开 issue 中包含 API key、转写文本、录音或其它个人信息——涉及你的数据的内容请用上面的邮箱发送。</p>
+    <p>隐私政策：<a href="https://fonos.giomni.com/privacy">https://fonos.giomni.com/privacy</a></p>
+    <h2>快速开始</h2>
+    <ol>
+      <li>打开 Fonos，在系统提示时允许麦克风权限。</li>
+      <li>在系统提示时允许语音识别权限。Apple Speech 无需任何额外设置，也不需要 API key。</li>
+      <li>在 Dictate 标签页点击麦克风，说话，再点一下停止。</li>
+      <li>可选——若要在其它 App 里输入，请在 iOS 设置 → 通用 → 键盘 → 键盘 → 添加新键盘 → Fonos 中添加 Fonos 键盘，然后为听写打开「允许完全访问」（Allow Full Access）。</li>
+      <li>可选——若要使用你自己的语音转写或语言模型服务，在 Settings → Models 中添加。</li>
+    </ol>
+    <p>卡住了？Settings → General → Setup Doctor 会一次性检查权限、键盘桥接、endpoint 和配置。</p>
+    <h2>常见问题</h2>
+    <h3>Fonos 为什么需要麦克风？</h3>
+    <p>用于录制你的语音以进行听写。在你开始一次录音之前，或在你显式启动键盘听写的 Keyboard Ready 会话之前，不会录任何东西。如果你之前拒绝了该权限，可在 iOS 设置 → 隐私与安全性 → 麦克风 → Fonos 中重新打开。</p>
+    <h3>Fonos 为什么需要语音识别权限？</h3>
+    <p>Apple Speech 是默认的转写引擎，识别由 iOS 执行。iOS 要求 App 在使用它之前获得你的授权。当你的设备和所选语言支持本机识别时，音频在设备上完成识别；否则 iOS 可能把它发送到 Apple 的服务器，该过程受 Apple 的隐私政策约束。如果你改为配置自己的语音转写服务，则使用该服务，不再使用 Apple Speech。</p>
+    <h3>Full Access 是什么？Fonos 键盘为什么要它？</h3>
+    <p>Full Access 是 iOS 上允许自定义键盘与其所属 App 和网络通信的开关。iOS 自定义键盘不能自己录音，因此 Fonos 键盘请求主 App 代它录音和转写，通过设备上的共享 App Group 容器通信。这条通道只有在打开 Full Access 时才可用。</p>
+    <p>没有 Full Access，Fonos 键盘仍然可以打字：数字、标点、空格、删除、回车，以及切回你常用键盘的地球键。只有听写需要 Full Access。</p>
+    <p>打开位置：iOS 设置 → 通用 → 键盘 → 键盘 → Fonos → 允许完全访问。</p>
+    <h3>Keyboard Ready 是什么？为什么会看到橙色小点？</h3>
+    <p>Keyboard Ready 是一个限时窗口，在此期间主 App 保持麦克风输入处于活动状态，好让键盘不跳转 App 就能听写。在 Fonos → Settings → General → Keyboard Dictation 中启动。默认 15 分钟，可设置为 1 到 30 分钟。</p>
+    <p>会话活动期间，iOS 会显示橙色麦克风指示——那是 iOS 在如实告诉你：有一个输入会话开着。Fonos 会丢弃全部空闲音频，在你点击 Fonos 键盘上的麦克风之前不保留任何内容。Fonos 内有一个横幅显示剩余时间，一点即可停止会话；它也会自动过期。仅仅启动 Fonos 从不打开麦克风。</p>
+    <h3>键盘听写要求 Fonos App 在运行吗？</h3>
+    <p>是。键盘自身没有录音器，所以主 App 必须存活并处于 Keyboard Ready 会话中。让 Fonos 待在后台就够了——不需要它在前台显示。如果你在 App 切换器里划掉了 Fonos，或 iOS 在它处于后台时回收了它，键盘会提示无法连接到 App；重新打开 Fonos 并再次启动 Keyboard Ready 即可。</p>
+    <h3>没有 Full Access 时键盘能做什么？</h3>
+    <p>可以输入数字、标点、空格、删除和回车，并用地球键切换到下一个键盘。不能听写，因为听写需要与主 App 的连接。键盘会明确显示缺什么，而不是无声失败。</p>
+    <h3>Fonos 为什么请求本地网络权限？</h3>
+    <p>只有当你把 Fonos 指向你自己网络中的模型服务器时才会请求——例如地址形如 <code>http://192.168.1.10:11434</code> 的 OMLX、Ollama 或 LM Studio。iOS 要求 App 在访问本地网络上的其它设备前获得授权。如果你只用 Apple Speech 或互联网上的 HTTPS 服务，这个提示不会出现。该权限按 App 管理，位置在 iOS 设置 → 隐私与安全性 → 本地网络。</p>
+    <h3>如何删除我的数据，或撤回给 AI 服务的授权？</h3>
+    <p>所有数据都在你的设备上。</p>
+    <ul>
+      <li>历史记录：在 History 标签页左滑一条记录即可删除。Settings → General → History 设置记录保留多久（7 天、30 天、90 天或永久）。</li>
+      <li>笔记：在笔记本内左滑删除单条笔记；整个笔记本可在该笔记本的设置里删除。</li>
+      <li>API key：在 Settings → Models 里删除对应的模型配置，它的 key 会随之从 Keychain 中删除。如果你想彻底清除凭据，请在卸载前先做这一步。</li>
+      <li>远端 AI 授权：Settings → General → Privacy &amp; Data Sharing → 撤回。撤回后 Fonos 会阻断后续的网络语音转写与语言模型请求，直到你再次允许该 endpoint。</li>
+    </ul>
+    <p>撤回授权不会删除服务商此前已经收到的内容——请直接依据该服务商自己的隐私政策向它提出请求。</p>
+    <h3>如何完全离线使用 Fonos？</h3>
+    <p>使用 Apple Speech，让所有 recipe 都不含语言模型步骤，并且不配置任何远端 endpoint。这样 Fonos 自身不会向网络发送任何内容。</p>
+    <p>Apple 在设备上识别还是在 Apple 的服务器上识别，由 iOS 根据你的设备和所选语言决定；当该语言在你的设备上受支持并已下载时，iOS 使用本机识别。最诚实的验证方法是飞行模式：如果断网后听写仍然出文字，说明识别发生在设备上。</p>
+    <h2>键盘听写故障排查</h2>
+    <p>如果点击键盘上的麦克风没有反应或报错，按顺序检查：</p>
+    <ol>
+      <li>Fonos 键盘是否已添加？「允许完全访问」是否已打开？（iOS 设置 → 通用 → 键盘 → 键盘 → Fonos）</li>
+      <li>Fonos 是否在运行？Keyboard Ready 是否处于活动状态？（横幅会显示剩余时间）</li>
+      <li>会话是否已过期？重新启动即可，默认时长 15 分钟。</li>
+      <li>是否被来电、Siri 或耳机切换打断？Fonos 会暂停并恢复；如果横幅显示已暂停，稍等片刻，或停止后重新启动会话。</li>
+      <li>仍未解决：Settings → General → Setup Doctor，它会报告权限、App Group 桥接和 endpoint 可达性。</li>
+    </ol>
+    <h2>模型配置</h2>
+    <p>Fonos 开箱即用 Apple Speech，不需要账号，也不需要 API key。</p>
+    <p>在 Settings → Models 中，你可以填写 endpoint 和自己的 API key，添加你自己的语音转写或语言模型服务——任何兼容 OpenAI 的服务，或本地服务器都可以。在向已配置的 endpoint 发送语音或文本之前，Fonos 会标明服务商和目标地址、说明将发送什么，并请求授权。该授权可以随时撤回。</p>
+    <p>公网 endpoint 必须使用 HTTPS。只有你自己配置的 localhost 或局域网地址才接受明文 HTTP。</p>
+    <p>API key 保存在 iOS Keychain 中，并标记为仅限本设备。它们绝不会发送给 Fonos 的开发者。</p>
+  </main>
+  <footer>© 2026 Ethan H.B. Zhou</footer>
+</body>
+</html>

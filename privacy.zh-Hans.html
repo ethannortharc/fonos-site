@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonos 隐私政策</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px 56px;
+      background: #fdfcfa;
+      color: #23211e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.01em; }
+    h2 { font-size: 21px; line-height: 1.3; margin: 40px 0 12px; letter-spacing: -0.005em; }
+    h3 { font-size: 17px; line-height: 1.4; margin: 28px 0 8px; font-weight: 600; }
+    p, li { margin: 0 0 14px; }
+    ul, ol { padding-left: 22px; margin: 0 0 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #a6631b; text-overflow: ellipsis; overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 1px 5px;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+    }
+    nav {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 15px;
+    }
+    nav a { margin-right: 16px; white-space: nowrap; }
+    footer {
+      max-width: 720px;
+      margin: 48px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      color: #6d675f;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #171614; color: #e9e5df; }
+      a { color: #e0a253; }
+      code { background: rgba(255, 255, 255, 0.08); }
+      nav { border-bottom-color: rgba(255, 255, 255, 0.12); }
+      footer { border-top-color: rgba(255, 255, 255, 0.12); color: #9b948a; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Fonos</a>
+    <a href="support.zh-Hans.html">支持</a>
+    <a href="privacy.html">English</a>
+  </nav>
+  <main>
+    <h1>Fonos 隐私政策</h1>
+    <p>最后更新：2026 年 9 月 5 日</p>
+    <p>Fonos 是一款 iPhone 语音听写 App。本政策说明 Fonos 如何处理语音、文本、笔记和配置数据。</p>
+    <p>Fonos 没有用户账号，也没有由 Fonos 运营的服务器。Fonos 的开发者永远不会收到你的录音、转写文本、笔记、prompt 或 API key。</p>
+    <h2>你创建的数据</h2>
+    <p>Fonos 会处理录音、转写文本、编辑后的文字、翻译结果、听写历史和笔记。听写历史和笔记保存在你的设备上，直到你删除它们。</p>
+    <h2>麦克风与语音识别</h2>
+    <p>Fonos 会请求麦克风权限，用于录制你的语音以进行听写。使用 Apple Speech 时，Fonos 还会请求语音识别权限。</p>
+    <h3>Apple Speech</h3>
+    <p>Apple Speech 是默认的转写引擎，识别过程由 iOS 执行，而不是由 Fonos 执行。当你的设备和所选语言支持本机识别时，音频在设备上完成识别；当它们不支持时，iOS 可能会把音频发送到 Apple 的服务器处理。该处理由 Apple 执行，受 Apple 的隐私政策约束，不受本政策约束。Fonos 不会收到发送给 Apple 的任何内容的副本。</p>
+    <h3>Keyboard Ready</h3>
+    <p>为了在 Fonos 自定义键盘里不跳转 App 就能听写，你可以在主 App 中显式启动一个限时的 Keyboard Ready 会话。默认 15 分钟，可在 1 到 30 分钟之间配置。会话期间 iOS 会保持麦克风输入处于活动状态，并显示它的麦克风指示。在你点击 Fonos 键盘上的麦克风之前，进入的音频缓冲会被立即丢弃，不会被存储、识别或上传。点击之后，Fonos 只在内存中保留这一段有限的语音，并在所选 recipe 完成、失败或取消后释放。Keyboard Ready 会自动结束，你也可以提前手动停止。Fonos 从不在后台播放音频；后台音频能力仅用于维持这个录音会话。</p>
+    <h2>Fonos 键盘</h2>
+    <p>键盘上的打字键——数字、标点、空格、删除、回车，以及切换到其它键盘的地球键——完全运行在键盘扩展内部。它们在没有 Full Access 的情况下也能用，不使用 App Group，也不会把任何内容发出设备。</p>
+    <p>键盘听写需要 Full Access。iOS 自定义键盘不能录音，因此 Fonos 键盘请求主 App 代它录音和转写，通过设备上的共享 App Group 容器（<code>group.com.fonos.ios</code>）通信。只有这次听写的文本、所选 recipe 及其状态会经过 App Group。键盘不读取你已有的文字、你的按键内容或剪贴板，键盘自身也没有任何网络代码。</p>
+    <h2>可选的第三方服务</h2>
+    <p>Fonos 默认可以使用 Apple Speech。你也可以通过填写自己的 endpoint 和 API key 来配置语音转写或语言模型服务。Fonos 不替你选择这些服务，也与它们没有商业关系。</p>
+    <p>在发送内容之前，App 会标明服务商和网络目标地址，说明将要发送的是录音、转写文本还是文字 prompt，并要求你明确授权。只有当你主动使用某个用到该远端模型的功能时（例如一个语音 recipe 或语音笔记处理），录音、转写文本、笔记和 prompt 才会被发送。</p>
+    <p>你对第三方服务的使用受该服务商自己的隐私政策和条款约束。</p>
+    <p>公网 AI endpoint 必须使用 HTTPS。只有在你显式配置 localhost 或局域网服务器时，才接受明文 HTTP。</p>
+    <h3>连通性测试与模型发现</h3>
+    <p>Setup Doctor 只对你已经授权过的 endpoint 做可达性检查。这类检查向该 endpoint 的基础地址发送一个普通请求，不携带任何录音、转写文本、prompt 或凭据。</p>
+    <p>模型发现会询问某个已配置的 endpoint 提供哪些模型。它不发送录音、转写文本或 prompt，但会出示你正在测试的那个配置的 API key，因为 endpoint 需要它才能回答。Fonos 会在该请求发出之前告知你目标地址，未经你同意不会发送。</p>
+    <h2>API Key</h2>
+    <p>你在 Fonos 中填写的 API key 保存在 iOS Keychain 中，不写入普通的 App 设置存储，也不会发送给 Fonos 的开发者。key 离开设备的唯一途径，是作为请求头发送给你为它配置的那个 endpoint。</p>
+    <p>这些 key 被标记为仅限本设备：不参与 iCloud Keychain 同步，也不会通过备份恢复到另一台设备上。删除一个模型配置会同时从 Keychain 中删除它的凭据。由于 iOS 可能会独立于 App 本地沙盒保留 Keychain 条目，如果你想明确清除这些凭据，请在卸载 Fonos 之前先删除模型配置。</p>
+    <h2>分析与广告</h2>
+    <p>Fonos 不包含任何第三方 SDK——没有分析、没有广告、没有崩溃上报。Fonos 不会用你的数据在其它公司的 App 或网站上追踪你。</p>
+    <h2>本地数据</h2>
+    <p>历史记录、笔记、配置和远端 AI 授权选择都保留在你的设备上，直到你删除它们，或 iOS 移除该 App 的本地沙盒。你可以在 App 内删除本地历史、笔记和模型配置。你可以随时在 Settings → General → Privacy &amp; Data Sharing 撤回全部远端 AI 授权。撤回之后，Fonos 会阻断后续的网络 STT 和 LLM 请求，直到你再次明确允许该 endpoint。</p>
+    <p>Fonos 不运营账号或云存储服务。在 Fonos 中撤回授权，并不会删除模型服务商此前已经收到的内容。该服务商自行控制其保留和删除策略；请查阅它的隐私政策，并使用它的隐私控制来请求删除。</p>
+    <h2>相机</h2>
+    <p>只有当你选择通过扫描二维码导入配置时，Fonos 才会请求相机权限。相机仅用于读取该二维码，不作他用；不会保存或传输任何图像。同样的配置也可以从文件或粘贴的文本导入，因此相机权限是可选的。</p>
+    <h2>儿童</h2>
+    <p>Fonos 是通用效率工具，不面向儿童，不含广告、社交功能或内容信息流。</p>
+    <h2>本政策的变更</h2>
+    <p>如果本政策发生变更，更新后的版本会发布在本页地址，并标注新的「最后更新」日期。</p>
+    <h2>联系方式</h2>
+    <p>邮箱：<a href="mailto:ethanzhou222@gmail.com">ethanzhou222@gmail.com</a></p>
+    <p>支持页面：<a href="https://fonos.giomni.com/support">https://fonos.giomni.com/support</a></p>
+    <p>Fonos 也有一个公开的问题追踪页：<a href="https://github.com/ethannortharc/fonos-ios/issues">https://github.com/ethannortharc/fonos-ios/issues</a> 。请不要在公开 issue 中包含 API key、转写文本、录音或其它个人信息；这类内容请用上面的邮箱发送。</p>
+  </main>
+  <footer>© 2026 Ethan H.B. Zhou</footer>
+</body>
+</html>
